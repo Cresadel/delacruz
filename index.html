@@ -18,11 +18,11 @@
             background-color: rgb(139, 75, 51);
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            height: 300px; 
+            min-height: 300px; /* Changed to min-height */
             display: flex;
             align-items: center;
             justify-content: center; 
-            flex-direction: column;
+            flex-direction: column; /* Center elements vertically */
             text-align: center; /* Center text on smaller screens */
         }
 
@@ -55,11 +55,10 @@
         }
 
         nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            position: relative; /* Now relative to allow responsiveness */
             display: flex;
             gap: 40px;
+            margin-top: 20px; /* Added margin for spacing */
         }
 
         nav a {
@@ -89,6 +88,7 @@
             justify-content: center;
             text-align: center;
             padding: 20px; 
+            flex-direction: column; /* Added for vertical stacking */
         }
 
         main h2 {
@@ -140,22 +140,10 @@
 
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
-            header {
-                height: auto; 
-                padding: 10px; 
-            }
             nav {
                 flex-direction: column;
-                gap: 10px;
-                position: relative; /* Adjusted for mobile alignment */
-                top: auto; 
-                right: auto;
                 align-items: center;
                 margin-bottom: 20px; /* Space below nav */
-            }
-
-            nav .dropbtn {
-                width: 100%; /* Full-width buttons */
             }
 
             .header-center h1,
@@ -179,15 +167,15 @@
             }
 
             .header-center h1 {
-                font-size: 1.8em; /* Further reduce font size */
+                font-size: 1.5em; /* Further reduce font size */
             }
 
             .header-center h2 {
-                font-size: 1.5em; /* Further reduce font size */
+                font-size: 1.3em; /* Further reduce font size */
             }
 
             .header-center h3 {
-                font-size: 1.5em; /* Further reduce font size */
+                font-size: 1.3em; /* Further reduce font size */
             }
         }
     </style>
